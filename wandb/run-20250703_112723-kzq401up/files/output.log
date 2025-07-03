@@ -1,0 +1,24 @@
+Epoch 1/1: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [03:43<00:00, 74.39s/it, loss=8.7]
+Epoch: 1, Batch: 0, Loss: 11.03
+Testing: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.70s/it]
+Test CrossEntropy Loss (per token, ignoring pad): 8.0712
+Traceback (most recent call last):
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/train.py", line 119, in <module>
+    main()
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/train.py", line 25, in main
+    trained_weights = train(hyperparameters)
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/train.py", line 80, in train
+    test(model, test_loader, device)
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/train.py", line 115, in test
+    wandb.log(f"Test CrossEntropy Loss (per token, ignoring pad): {avg_loss:.4f}")
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 443, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1987, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1705, in _log
+    raise TypeError("wandb.log must be passed a dictionary")
+TypeError: wandb.log must be passed a dictionary

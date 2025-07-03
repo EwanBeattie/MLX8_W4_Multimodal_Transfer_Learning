@@ -1,0 +1,28 @@
+{
+  "os":  "macOS-12.7.6-x86_64-i386-64bit",
+  "python":  "CPython 3.10.4",
+  "startedAt":  "2025-07-03T10:27:23.069550Z",
+  "program":  "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/EwanBeattie/MLX8_W4_Multimodal_Transfer_Learning",
+    "commit":  "38c7e47301f2e777719a515446b13dba1fe7c700"
+  },
+  "email":  "ewanbeattie1@gmail.com",
+  "root":  "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning",
+  "host":  "donation-6.local",
+  "executable":  "/Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/bin/python",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "disk":  {
+    "/":  {
+      "total":  "250790436864",
+      "used":  "234073636864"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "writerId":  "jdfy8f8f329rdi1k3vx4ls57nceruqk1"
+}

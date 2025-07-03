@@ -2,13 +2,9 @@ hyperparameters = {
     'batch_size': 32,
     'learning_rate': 0.001,
     'epochs': 1,
-    'embedding_size': 24,
-    'key_query_size': 24,
-    'value_size': 24,
+    'embedding_size': 768,
     'num_layers': 2,
     'dropout': 0.1,
-    'num_patches': 1,
-    'use_pos_encoding': False,
 }
 
 sweep_config = {
@@ -29,7 +25,7 @@ sweep_config = {
 }
 
 run_config = {
-    "project": "mlx8-week-03-transformers",
+    "project": "mlx8-week-04-multimodel-transformers",
     "entity": "ewanbeattie1-n-a",
     'run_type': 'train',  # 'sweep', 'train' or 'test
 }

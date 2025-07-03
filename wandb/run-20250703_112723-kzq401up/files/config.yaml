@@ -1,0 +1,61 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            jdfy8f8f329rdi1k3vx4ls57nceruqk1:
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 2
+                cpu_count_logical: 4
+                disk:
+                    /:
+                        total: "250790436864"
+                        used: "234073636864"
+                email: ewanbeattie1@gmail.com
+                executable: /Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/.venv/bin/python
+                git:
+                    commit: 38c7e47301f2e777719a515446b13dba1fe7c700
+                    remote: https://github.com/EwanBeattie/MLX8_W4_Multimodal_Transfer_Learning
+                host: donation-6.local
+                memory:
+                    total: "8589934592"
+                os: macOS-12.7.6-x86_64-i386-64bit
+                program: /Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning/train.py
+                python: CPython 3.10.4
+                root: /Users/donation/Documents/MLX/Week_4/MLX8_W4_Multimodal_Transfer_Learning
+                startedAt: "2025-07-03T10:27:23.069550Z"
+                writerId: jdfy8f8f329rdi1k3vx4ls57nceruqk1
+        m: []
+        python_version: 3.10.4
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+            "3":
+                - 16
+            "4": 3.10.4
+            "5": 0.21.0
+            "6": 4.53.0
+            "12": 0.21.0
+            "13": darwin-x86_64
+batch_size:
+    value: 32
+dropout:
+    value: 0.1
+embedding_size:
+    value: 768
+epochs:
+    value: 1
+learning_rate:
+    value: 0.001
+num_layers:
+    value: 2

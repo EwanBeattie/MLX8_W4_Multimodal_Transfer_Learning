@@ -1,14 +1,12 @@
 import torch
-from math import sqrt
 from model import Transformer
 from configs import hyperparameters, run_config, sweep_config
 import torch.nn as nn
 from types import SimpleNamespace
 from data import get_data_loaders
-import transformers
 import externals
 from tqdm import tqdm
-# import wandb
+import wandb
 
 def main():
 
@@ -30,12 +28,12 @@ def main():
 
 def train(config=None):
     # Obtain correct cofig dict, init wandb then create wandb.config object
-    # if config is None:
-    #     config = sweep_config
-    # wandb.init(entity=run_config['entity'], project=run_config['project'], config=config)
-    # config = wandb.config
+    if config is None:
+        config = sweep_config
+    wandb.init(entity=run_config['entity'], project=run_config['project'], config=config)
+    config = wandb.config
 
-    config = SimpleNamespace(**hyperparameters)
+    # config = SimpleNamespace(**hyperparameters)
 
     device = get_device()
     
@@ -76,12 +74,12 @@ def train(config=None):
 
             if batch_index % 100 == 0:
                 print(f'Epoch: {epoch + 1}, Batch: {batch_index}, Loss: {loss.item():.2f}')
-                # wandb.log({'loss': loss.item()})
+                wandb.log({'loss': loss.item()})
             loop.set_postfix(loss=loss.item())
 
     test(model, test_loader, device)
 
-    # wandb.finish()
+    wandb.finish()
 
     return model.state_dict()
 
@@ -113,10 +111,8 @@ def test(model, test_loader, device):
             total_tokens += target_text.ne(pad_token_id).sum().item()
 
     avg_loss = total_loss / total_tokens if total_tokens > 0 else 0
-    print(f"Test CrossEntropy Loss (per token, ignoring pad): {avg_loss:.4f}")
-    # wandb.log({"test_accuracy": accuracy})
-
-
+    print(f"Test Loss: {avg_loss:.4f}")
+    wandb.log({'test_loss': avg_loss})
 
 if __name__ == "__main__":
     main()
