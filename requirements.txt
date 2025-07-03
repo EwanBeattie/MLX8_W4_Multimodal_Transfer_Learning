@@ -1,0 +1,15 @@
+numpy<2.0.0
+torch
+torchvision
+matplotlib
+datasets
+pygments
+ipykernel
+transformers
+safetensors
+tqdm
+# wandb
+# streamlit
+# streamlit_drawable_canvas
+# sqlalchemy
+# psycopg2-binary
